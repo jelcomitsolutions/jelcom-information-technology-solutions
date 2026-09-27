@@ -578,12 +578,18 @@ a {
     font-weight: 600;
 }
 
+.demo-link-title.is-disabled {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+}
+
 .demo-link-url {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
 }
 
 .demo-link-cta {
+    display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
     border-radius: 999px;
@@ -591,22 +597,13 @@ a {
     color: var(--ink);
     font-weight: 600;
     font-size: 0.85rem;
+    text-decoration: none;
     transition: transform 0.15s ease;
 }
 
-.demo-link:not(.is-disabled):hover .demo-link-cta,
-.demo-link:not(.is-disabled):focus-visible .demo-link-cta {
+.demo-link-cta:hover,
+.demo-link-cta:focus-visible {
     transform: translateY(-2px);
-}
-
-.demo-link.is-disabled {
-    cursor: not-allowed;
-    opacity: 0.55;
-}
-
-.demo-link.is-disabled .demo-link-cta {
-    background: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.6);
 }
 
 .demo-window figcaption {
